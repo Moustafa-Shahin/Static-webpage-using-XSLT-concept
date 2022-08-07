@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link href="style.css" rel="stylesheet">
+<style>
+body{
+  background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#f2f2f2;
+}
+.topnav a {
+  float: right;
+  color: #333;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.topnav p {
+  float: left;
+  color: #000;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.topnav a:hover {
+  background-color: #23D6E9;
+  color: black;
+}
+#header{
+  color: black;
+  padding: 40px;
+}
+.button {
+  background-color: #129EA9;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 700px;
+}
+</style>
+</head>
+<body>
+
+
+<h1 id="header"><center>Teaching is the greatest act of optimism<TREATMENT></center></h1>
+<span id="element2"><center>Teaching is more than imparting knowledge; it is inspiring change. Learning is more than absorbing facts; it is acquiring understanding.</center></span>
+<!-- <p><center><button class="button" onclick="loadXMLDoc()">CONTACT US</button></center></p> -->
+<a href="teacher_info.xml" class="button">Teacher Info</a>
+<p id="demo"></p>
+<br><br>
+
+<script>
+
+<!-- XML PATH-->
+
+function loadXMLDoc(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        showResult(xhttp.responseXML);
+    }
+};
+
+<!-- DOM PARSER -->
+
+function loadTeacherinfo(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+    }
+};
+xhttp.open("GET", "teacher_info.xml", true);
+xhttp.send();
+}
+
+function myFunction(xml) {
+  var x, i, xmlDoc, table;
+  xmlDoc = xml.responseXML;
+  table = "<tr><th><b>TEACHERS</b></th></tr><br>";
+  x = xmlDoc.getElementsByTagName("list")
+  for (i = 0; i < x.length; i++) { 
+    table += "<tr><td>" + (i+1)+"."+
+    x[i].getElementsByTagName("ul")[0].childNodes[0].nodeValue + "</td></tr><br>";
+  }
+  document.getElementById("sp").innerHTML = table;
+}
+</script>
+
+
+</body>
+</html>

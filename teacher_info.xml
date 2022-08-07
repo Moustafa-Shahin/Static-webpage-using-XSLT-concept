@@ -1,0 +1,50 @@
+<?xml version = "1.0"?> 
+ 
+<?xml-stylesheet type = "text/xsl" href = "teacherinfo.xsl"?>   <!-- LINKING XSLT DOC TO XSL DOC-->
+
+<teacherinfo>    <!--root element-->
+
+<personalinfo did="01">  <!--child element-->
+<name>DEBOJIT BORO</name>  <!--subchild element-->
+<cno>999998888</cno>
+<exp>6yrs</exp>
+<subject>WEB TECHNOLOGY</subject>
+</personalinfo>
+
+<personalinfo did="02">
+<name>SARAT SAHARIA</name>
+<cno>8888877777</cno>
+<exp>8yrs</exp>
+<subject>DATA BASE</subject>
+</personalinfo>
+
+<personalinfo did="03">
+<name>S.SATYAPATHI</name>
+<cno>7777709090</cno>
+<exp>9yrs</exp>
+<subject>SOFTWARE ENGINEERING</subject>
+</personalinfo>
+
+<personalinfo did="04">
+<name>L.B.SINGH</name>
+<cno>8989807079</cno>
+<exp>4yr</exp>
+<subject>C++</subject>
+</personalinfo>
+
+<personalinfo did="05">
+<name>IBOTOMBI SINGH</name>
+<cno>7878798988</cno>
+<exp>8yrs</exp>
+<subject>DSOOP</subject>
+</personalinfo>
+
+<personalinfo did="06">
+<name>NITYANANDA SARMA</name>
+<cno>9898778899</cno>
+<exp>9yrs</exp>
+<subject>INTRODUCTORY COMPUTING</subject>
+</personalinfo>
+
+</teacherinfo>
+
